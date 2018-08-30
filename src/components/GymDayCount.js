@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDumbbell, faBicycle, faCalendar } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faDumbbell, faBicycle, faCalendar)
 
 const percentToDecimal = (decimal) => {
     return(
@@ -16,12 +21,15 @@ const GymDayCount = ({total, lifting, cardio, goal}) => (
     <div className="gym-day-count">
         <div className="total-days">
             <span>{total} days</span>
+            <FontAwesomeIcon icon="calendar" />
         </div>
         <div className="lifting-days">
             <span>{lifting} days</span>
+            <FontAwesomeIcon icon="dumbbell" />
         </div>
         <div className="cardio-days">
             <span>{cardio} days</span>
+            <FontAwesomeIcon icon="bicycle" />
         </div>
         <span>
             {calcGoalProgress(total, goal)}
