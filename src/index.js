@@ -1,16 +1,10 @@
 import React from 'react'
+// import { render } from 'react-dom'
+import ReactDOM from 'react-dom';
+import GymDayCount from './components/GymDayCount'
 import './stylesheets/index.css'
-import { render } from 'react-dom'
-import { hello, goodbye } from './lib'
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import Greetings from './lib';
 import registerServiceWorker from './registerServiceWorker';
 
-render(
-    <div>
-        {hello}
-        {goodbye}
-    </div>, 
+ReactDOM.render(<GymDayCount />,
     document.getElementById('root'));
 registerServiceWorker();
